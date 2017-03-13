@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_popupwindow"
+    android:padding="3dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/startChatBtn"
+        android:layout_width="110dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/selector_popbg"
+        android:drawableLeft="@drawable/ic_startchat"
+        android:drawablePadding="10dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:text="@string/a_chat"
+        android:textColor="@color/date_black_light"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/sendMessagesBtn"
+        android:layout_width="110dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/selector_popbg"
+        android:drawableLeft="@drawable/ic_sendmsgs"
+        android:drawablePadding="10dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:text="@string/group_msg"
+        android:textColor="@color/date_black_light"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/scanningBtn"
+        android:layout_width="110dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/selector_popbg"
+        android:drawableLeft="@drawable/ic_scanning"
+        android:drawablePadding="10dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:text="@string/richScan"
+        android:textColor="@color/date_black_light"
+        android:textSize="18sp" />
+
+</LinearLayout>

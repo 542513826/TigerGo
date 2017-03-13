@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/whitesmoke"
+              android:orientation="vertical">
+
+    <include layout="@layout/custom_title"/>
+
+    <include
+        android:id="@+id/shop_search_layout"
+        layout="@layout/custom_search"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/id_swiperefreshlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:id="@+id/mScrollView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/shop_tags_layout"
+                    layout="@layout/fragment_shop_tags"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:clipToPadding="false"/>
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_below="@id/shop_tags_layout"/>
+
+                <ListView
+                    android:id="@+id/shop_lv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view"
+                    android:layout_marginBottom="20dp"
+                    android:cacheColorHint="@color/transparent"
+                    android:divider="@color/transparent"
+                    android:dividerHeight="0dp"
+                    android:fadingEdge="none"
+                    android:listSelector="@color/transparent"
+                    android:scrollbars="none"/>
+
+                <TextView
+                    android:id="@+id/not_value_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/shop_lv"
+                    android:gravity="center"
+                    android:text="@string/not_value"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 通讯录listview选中背景 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_selected="true" android:drawable="@color/ultramarine"/>
+    <item android:state_checked="true" android:drawable="@color/ultramarine"/>
+    <item android:state_pressed="true" android:drawable="@color/ultramarine"/>
+    <item android:drawable="@color/white"></item>
+
+</selector>

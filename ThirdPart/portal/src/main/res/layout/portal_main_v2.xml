@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+
+    <RadioGroup
+        android:id="@+id/tab_menu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:elevation="5dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/tab_app"
+            style="@style/tab_rb_style"
+            android:checked="true"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/tab_appshop"
+            android:text="应用"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/tab_message"
+            style="@style/tab_rb_style"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/tab_message"
+            android:text="消息"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/tab_address"
+            style="@style/tab_rb_style"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/tab_address"
+            android:text="组织"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/tab_my"
+            style="@style/tab_rb_style"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/tab_my"
+            android:text="我的"
+            android:textSize="12sp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:elevation="6dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/BadgeButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:background="@color/de_transparent"
+                android:clickable="false" />
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:visibility="invisible" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tab_menu"
+        android:background="#ffffff">
+    </FrameLayout>
+
+    <!--<include layout="@layout/bottom"/>-->
+</RelativeLayout>

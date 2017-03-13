@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<harp>
+	<id>com.harp.app</id>
+	<version>1.0</version>
+	<versionCode>HARP0001</versionCode>
+	<description>HARP Configuration</description>
+	<common>
+		<preference name="startPage" value="www/index.html" type="string" />
+        <preference name="errorPage" value="www/pageError.html" type="string" />
+		<preference name="webViewVerticalScrollBar" value="true" type="bool" />
+		<preference name="webViewHorizontalScrollBar" value="true" type="bool" />
+        <preference name="webViewLink-tel" value="false" type="bool" />
+        <preference name="webViewLink-sms" value="false" type="bool" />
+        <preference name="webViewLink-geo" value="false" type="bool" />
+        <preference name="webViewLink-mailto" value="false" type="bool" />
+		<preference name="webViewBackgroundColor" value="#ffffff" type="string" />
+        <preference name="logEnable" value="true" type="bool" />
+        <preference name="internalURLs" value="" type="string" />
+        <preference name="log-semp" value="true" type="bool" />
+        <preference name="log-semp-level" value="debug" type="string" />
+        <preference name="log-semp-maxSize" value="" type="string" />
+        <preference name="log-semp-maxHistory" value="" type="string" />
+	</common>
+	<ios>
+		<preference name="webViewBounce" value="true" type="bool" />
+        <preference name="topActivityIndicator" value="whiteLarge" type="string" />
+        <preference name="urlScheme" value="mdlauncher://{'caller':'SID_MOBILEINFO_MAIN','target':'SID_LAUNCHER_MAIN'}" type="string" />
+	</ios>
+	<android>
+		<preference name="webViewLayerType" value="none" type="string" />
+        <preference name="windowHardwareAcceleration" value="false" type="bool" />
+        <preference name="webViewCacheMode" value="normal" type="string" />
+        <preference name="onDestoryClearCache" value="true" type="bool" />
+        <preference name="launcher-pkgname" value="com.sds.BizAppLauncher" type="string" />
+        <preference name="push-senderid" value="" type="string" />
+        <preference name="push-senderpw" value="" type="string" />
+        <preference name="push-actpkgname" value="com.HybridPlatformExample" type="string" />
+        <preference name="push-actactivityname" value="HybridPlatformExampleActivity" type="string" />
+        <preference name="push-acturl" value="file:///android_asset/www/util/push.html" type="string" />
+        <preference name="push-icon_onoff" value="ON" type="string" />
+        <preference name="push-type" value="SOUND,VIBRATE" type="string" />
+        <preference name="push-gcmprojectid" value="" type="string" />
+        <preference name="push-gcmappserverkey" value="" type="string" />
+        <preference name="webViewLongClickable" value="false" type="bool" />
+	</android>
+</harp>

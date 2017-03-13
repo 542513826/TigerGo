@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--这个里面的不需要管,真正读取的是app目录下的资源文件-->
+<bottom>
+    <tab>
+        <index>1</index>
+        <label>tab1</label>
+        <fragment-class>com.smartdot.mobile.portal.fragment.myFragment</fragment-class>
+    </tab>
+    <tab>
+        <index>2</index>
+        <label>tab2</label>
+        <fragment-class>com.smartdot.mobile.portal.fragment.myFragment</fragment-class>
+    </tab>
+    <tab>
+        <index>3</index>
+        <label>tab3</label>
+        <fragment-class>com.smartdot.mobile.portal.fragment.ConversionListFragment</fragment-class>
+    </tab>
+</bottom>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_line_header"
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:layout_marginLeft="1.5dp"
+        android:layout_marginRight="1.5dp"
+        android:background="@drawable/bg_top_circle"/>
+
+    <!--顶部豁口图-->
+    <TextView
+        android:layout_marginLeft="0.5dp"
+        android:layout_marginRight="0.5dp"
+        android:id="@+id/tv_bookmark_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/pic_bookmark"/>
+
+    <RelativeLayout
+        android:paddingTop="7dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-1.5dp"
+        android:layout_marginRight="-1.5dp"
+        android:background="@drawable/bg_shop_item">
+
+        <ImageView
+            android:id="@+id/app_icon_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/app_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/app_icon_iv"
+            android:text="移动办公"/>
+
+        <TextView
+            android:id="@+id/app_type_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/app_name_tv"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/app_icon_iv"
+            android:text="办公软件"
+            android:textColor="#BFBFBF"
+            android:textSize="12sp"/>
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/roomRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="9dp"
+            android:layout_below="@+id/app_type_tv"
+            android:layout_toEndOf="@+id/app_icon_iv"
+            android:numStars="5"
+            android:rating="2"/>
+
+        <TextView
+            android:id="@+id/shop_comment_number_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="35dp"
+            android:layout_toRightOf="@id/ratingBar"
+            android:text="( 4 )"
+            android:textColor="#BFBFBF"
+            android:textSize="10sp"/>
+
+        <LinearLayout
+            android:clickable="true"
+            android:id="@+id/shop_item_open"
+            android:layout_width="60dp"
+            android:layout_height="55dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/shop_item_open_img"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="7dp"
+                android:src="@drawable/pic_shop_down"/>
+
+            <TextView
+                android:id="@+id/shop_item_open_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:clickable="true"
+                android:text="下载"
+                android:textColor="#32CFFA"
+                android:textSize="12sp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_bookmark_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/pic_item_line"/>
+
+    <!--底部豁口图-->
+    <TextView
+        android:id="@+id/tv_bookmark_footer"
+        android:layout_width="fill_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/bg_bottom_circle"/>
+</LinearLayout>

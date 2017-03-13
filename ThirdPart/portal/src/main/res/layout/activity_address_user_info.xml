@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/address_info_signature"
+        layout="@layout/fragment_my_signature"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/address_info_title"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="-65dp"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/address_info_signature"
+        android:layout_marginTop="-10dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/duty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:text="现任职务"
+                android:textColor="@color/black_v2"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/duty_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@id/duty"
+                android:textColor="@color/darkgray_v9"
+                android:textSize="16sp"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.7dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/darkgray_v11"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/obey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:text="隶属部门"
+                android:textColor="@color/black_v2"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/obey_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@id/obey"
+                android:textColor="@color/darkgray_v9"
+                android:textSize="16sp"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.7dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/darkgray_v11"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:text="联系电话"
+                android:textColor="@color/black_v2"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/phone_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@id/phone"
+                android:textColor="@color/darkgray_v9"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:id="@+id/message_iv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/mobil_iv"
+                android:src="@drawable/btn_message"/>
+
+            <ImageView
+                android:id="@+id/mobil_iv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="18dp"
+                android:src="@drawable/btn_phone"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.7dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/darkgray_v11"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:text="单位座机"
+                android:textColor="@color/black_v2"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/tel_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@id/tel"
+                android:textColor="@color/darkgray_v9"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:id="@+id/tel_iv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="18dp"
+                android:src="@drawable/btn_phone"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.7dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/darkgray_v11"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:text="企业邮箱"
+                android:textColor="@color/black_v2"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/mail_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@id/mail"
+                android:textColor="@color/darkgray_v9"
+                android:textSize="16sp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/address_info_title"
+        layout="@layout/activity_address_user_info_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:layout_above="@+id/address_info_tabe"
+        android:background="@drawable/bg_tab"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/address_info_tabe"
+        layout="@layout/activity_address_user_info_tab"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

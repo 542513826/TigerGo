@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/whitesmoke"
+    android:orientation="vertical">
+
+    <include layout="@layout/custom_title" />
+
+    <ScrollView
+        android:id="@+id/mScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/item_shop_updata"
+                android:layout_width="fill_parent"
+                android:layout_height="85dp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/shop_RecyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="280dp" />
+
+            <include layout="@layout/activity_shop_detail_introduce" />
+
+            <include layout="@layout/activity_shop_detail_info" />
+
+            <include layout="@layout/activity_shop_detail_grade" />
+
+
+            <ListView
+                android:id="@+id/comment_lv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:cacheColorHint="@color/transparent"
+                android:divider="@color/transparent"
+                android:dividerHeight="0dp"
+                android:fadingEdge="none"
+                android:listSelector="@color/transparent"
+                android:scrollbars="none" />
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/whitesmoke">
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/id_swiperefreshlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/whitesmoke">
+
+            <include
+                android:id="@+id/signature_layout"
+                layout="@layout/fragment_my_signature"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title_layout"
+                android:layout_marginTop="-65dp"/>
+
+            <include
+                android:id="@+id/item_layout"
+                layout="@layout/fragment_my_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/signature_layout"
+                android:layout_marginTop="5dp"/>
+
+            <include
+                android:id="@+id/title_layout"
+                layout="@layout/fragment_my_title"/>
+        </RelativeLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>
+

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.HybridPlatformExample" android:versionCode="1"
+	android:versionName="1.0">
+	<application android:icon="@drawable/icon"
+		android:label="@string/app_name"
+		android:debuggable="true">
+
+	</application>
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="23" />
+
+	<!-- # Hybrid Platform Core # -->
+	<!-- Allows read only access to phone state.
+		 Use : MDHInfo.Device.getDeviceInfo() API, UI Framework Native H/F -->
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<!-- Allows an app to access precise location from location sources such as GPS, cell towers, and Wi-Fi.
+		 Use : MDHDevice.GPS.getCurrentPosition(), MDHDevice.GPS.watchPosition() APIs -->
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<!-- Allows access to the vibrator
+		 Use : MDHDevice.Vibrator.run() API -->
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<!-- Allows applications to open network sockets. -->
+	<uses-permission android:name="android.permission.INTERNET" />
+	<!-- Allows an application to record audio
+		 Use : MDHDevice.Media.startRecord() API -->
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />
+	<!-- Allows applications to access information about networks
+	     Use : MDHDevice.Network.isReachableA(), MDHInfo.Device.getNetworkInfo() APIs -->
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<!-- Allows an application to write to external storage.
+	     Use : MDHDevice.Camera.getPicture(), MDHDevice.Camera.deleteImage() APIs-->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<!-- Allows applications to access information about Wi-Fi networks -->
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<!-- Allows an application to read the user's contacts data.
+	     Use : MDHPhone.Contact.search() -->
+	<uses-permission android:name="android.permission.READ_CONTACTS" />
+	<!-- ###################### -->
+
+	<!-- # Telephony Plugin # -->
+	<!-- Allows an application to send SMS messages.
+	     Use : MDHPhone.Telephony.sendSMS() -->
+	<uses-permission android:name="android.permission.SEND_SMS" />
+	<!-- Allows an application to initiate a phone call without going through the Dialer user interface
+	     for the user to confirm the call being placed.
+	     Use : MDHPhone.Telephony.call() -->
+	<uses-permission android:name="android.permission.CALL_PHONE" />
+	<!-- ###################### -->
+</manifest>

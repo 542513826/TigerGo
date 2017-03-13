@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-1.5dp"
+        android:layout_marginRight="-1.5dp"
+        android:background="@drawable/bg_shop_item"
+        android:orientation="vertical"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="20dp"
+            android:text="应用评分"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <RatingBar
+                android:id="@+id/detail_overall_star"
+                style="@style/detailRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="12dp"
+                android:layout_gravity="center_vertical"
+                android:numStars="5"
+                android:rating="3"/>
+
+            <TextView
+                android:id="@+id/detail_overall_grade_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="-3dp"
+                android:textColor="@color/black_v2"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <RatingBar
+                android:id="@+id/grayBar"
+                style="@style/detailRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="12dp"
+                android:layout_gravity="center_vertical"
+                android:numStars="5"
+                android:rating="5"/>
+
+            <ProgressBar
+                android:id="@+id/detail_five_star_progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="220dp"
+                android:layout_height="3dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:max="100"
+                android:progress="75"
+                android:progressDrawable="@drawable/progressbar_shop_grade"
+                android:text="nice"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <RatingBar
+                style="@style/detailRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="12dp"
+                android:layout_gravity="center_vertical"
+                android:numStars="5"
+                android:rating="4"/>
+
+            <ProgressBar
+                android:id="@+id/detail_four_star_progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="220dp"
+                android:layout_height="3dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:max="100"
+                android:progress="55"
+                android:progressDrawable="@drawable/progressbar_shop_grade"
+                android:text="nice"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <RatingBar
+                style="@style/detailRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="12dp"
+                android:layout_gravity="center_vertical"
+                android:numStars="5"
+                android:rating="3"/>
+
+            <ProgressBar
+                android:id="@+id/detail_three_star_progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="220dp"
+                android:layout_height="3dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:max="100"
+                android:progress="35"
+                android:progressDrawable="@drawable/progressbar_shop_grade"
+                android:text="nice"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <RatingBar
+                style="@style/detailRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="12dp"
+                android:layout_gravity="center_vertical"
+                android:numStars="5"
+                android:rating="2"/>
+
+            <ProgressBar
+                android:id="@+id/detail_two_star_progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="220dp"
+                android:layout_height="3dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:max="100"
+                android:progress="15"
+                android:progressDrawable="@drawable/progressbar_shop_grade"
+                android:text="nice"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <RatingBar
+                style="@style/detailRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="12dp"
+                android:layout_gravity="center_vertical"
+                android:numStars="5"
+                android:rating="1"/>
+
+            <ProgressBar
+                android:id="@+id/detail_one_star_progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="220dp"
+                android:layout_height="3dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:max="100"
+                android:progress="5"
+                android:progressDrawable="@drawable/progressbar_shop_grade"
+                android:text="nice"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0.15dp"
+        android:layout_marginRight="0.15dp"
+        android:background="@drawable/pic_bookmark"/>
+
+</LinearLayout>
