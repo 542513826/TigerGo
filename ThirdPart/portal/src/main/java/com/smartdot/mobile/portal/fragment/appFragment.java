@@ -42,7 +42,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 底部tab导航 - 应用
+ * 底部tab导航 - 应用 增加注释
  */
 public class appFragment extends Fragment implements View.OnClickListener {
 
