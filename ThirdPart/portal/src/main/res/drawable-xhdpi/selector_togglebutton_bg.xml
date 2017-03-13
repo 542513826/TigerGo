@@ -1,0 +1,5 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true"
+        android:drawable="@drawable/btn_chatinfo_open" /> <!-- pressed -->
+    <item android:drawable="@drawable/btn_charinfo_close" /> <!-- default/unchecked -->
+</selector>

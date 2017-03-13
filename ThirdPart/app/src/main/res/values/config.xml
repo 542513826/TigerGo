@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 消息图标所属的位置，起始位置是1 -->
+    <integer name="messageIndex">2</integer>
+    <!-- 根URL,代表当前应用接口请求URL的头地址 -->
+    <string name="baseUrl">http://101.201.76.73:8888/semp/thirdparty/oapi/mportal/</string>
+    <!-- 融云URL -->
+    <string name="rongUrl">http://101.201.76.73:9091</string>
+    <!-- 是否使用极光推送并向服务器注册设备信息 -->
+    <bool name="useJpush">true</bool>
+    <!-- 是否使用融云即时通讯 -->
+    <bool name="useRong">true</bool>
+    <!-- 极光推送向服务器注册URL -->
+    <string name="jpushUrl">http://101.201.76.73:8888/semp/thirdparty/oapi/push/registDevice</string>
+    <!-- 极光推送向服务器注销URL -->
+    <string name="logoutjpushUrl">http://101.201.76.73:8888/semp/thirdparty/oapi/push/pendingDevice</string>
+    <!-- 极光推送 AppId -->
+    <string name="jpushAppId">332594d9027c48ca9b00168dfffcd43b</string>
+    <!-- 是否使用多彩换肤功能 -->
+    <bool name="useChangeTheme">true</bool>
+
+</resources>

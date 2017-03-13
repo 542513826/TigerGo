@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    tools:context=".activity.LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_login_logo" />
+
+        <LinearLayout
+            android:id="@+id/login_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/bg_login_text"
+            android:orientation="vertical">
+
+            <com.smartdot.mobile.portal.widget.ClearWriteEditText
+                android:id="@+id/username_et"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:background="@color/de_transparent"
+                android:drawableLeft="@drawable/ic_login_username"
+                android:drawablePadding="10dp"
+                android:hint="@string/username_hint"
+                android:maxLength="20"
+                android:textColor="@color/blue"
+                android:textColorHint="@color/blue" />
+
+            <com.smartdot.mobile.portal.widget.ClearWriteEditText
+                android:id="@+id/password_et"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:background="@color/de_transparent"
+                android:drawableLeft="@drawable/ic_login_password"
+                android:drawablePadding="10dp"
+                android:hint="@string/password_hint"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:textColor="@color/blue"
+                android:textColorHint="@color/blue" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/login_button"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingStart="3dp"
+            android:paddingEnd="3dp"
+            android:layout_below="@+id/login_container"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/selector_login_button_bg"
+            android:elevation="3dp"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/english_btn"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignRight="@+id/login_button"
+            android:layout_below="@+id/login_button"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/selector_login_english_btn_bg" />
+
+        <Button
+            android:id="@+id/chinese_btn"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignRight="@+id/login_button"
+            android:layout_below="@+id/login_button"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/selector_login_chinese_btn_bg"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/ic_login_bottom" />
+</RelativeLayout>

@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "24.0.0"
+    defaultConfig {
+        applicationId "com.smartdot.mobile.thirdpart"
+        minSdkVersion 19
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        // 启用 multiDexEnable 分包编译,解除64K限制
+        multiDexEnabled true
+    }
+
+    dexOptions {
+        // 应用中包含lirary工程,禁用预编译 (64K)
+        preDexLibraries = false
+        // 加大java堆内存大小 (64K)
+        javaMaxHeapSize "2g"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['jniLibs']
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    testCompile 'junit:junit:4.12'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
+    androidTestCompile 'com.android.support.test:runner:0.5'
+    androidTestCompile 'com.android.support:support-annotations:23.4.0'
+    compile 'com.android.support:multidex:1.0.1'
+    releaseCompile project(path: ':portal', configuration: 'release')
+    debugCompile project(path: ':portal', configuration: 'debug')
+}

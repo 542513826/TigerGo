@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/custom_title_useimg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <RelativeLayout
+        android:id="@+id/search_rl"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_search"
+        android:visibility="gone"
+        android:clickable="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/ic_search"
+            android:text="搜索"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/no_chat_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/startChar_rl"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/selector_relativelayout_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/ic_conversitonlist_startchat"
+                android:drawablePadding="5dp"
+                android:text="点击发起聊天"
+                android:textColor="@color/blue"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/gray" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/no_net_rl">
+
+        <TextView
+            android:id="@+id/no_net_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lightGray"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:text="@string/check_network"/>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/no_net_tv"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/bg_nonet"/>
+
+        <Button
+            android:id="@+id/refresh_button"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_nonet_refresh"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:clickable="true"
+            android:layout_below="@+id/no_net_tv"/>
+
+
+    </RelativeLayout>
+    <fragment
+        android:id="@+id/conversationlist"
+        android:name="io.rong.imkit.fragment.ConversationListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

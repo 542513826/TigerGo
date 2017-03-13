@@ -1,0 +1,4 @@
+include ':app', ':portal', ':Rong_IMKit_SDK_v2_6_6', ':libzxing'
+
+include ':xwalk_core_library'
+include ':hARP_Example'

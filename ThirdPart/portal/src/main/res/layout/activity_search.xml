@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/search_bg"
+              android:orientation="vertical">
+
+    <include
+        layout="@layout/custom_title_useimg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"/>
+
+
+    <RelativeLayout
+        android:id="@+id/search_rl"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_search"
+        android:clickable="true"
+        android:elevation="5dp">
+
+
+        <EditText
+            android:id="@+id/search_et"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:background="#00000000"
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/ic_search"
+            android:hint="@string/search"
+            android:imeOptions="actionSearch"
+            android:maxLength="10"
+            android:singleLine="true"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/cancel_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:clickable="true"
+            android:text="@string/cancel"
+            android:textColor="#33d0fb"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/not_value_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99ffffff"
+        android:gravity="center"
+        android:text="没有可显示的内容"
+        android:visibility="gone"/>
+
+    <ListView
+        android:id="@+id/search_lv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:divider="@color/transparent"
+        android:dividerHeight="0dp"
+        android:fadingEdge="none"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none"/>
+</LinearLayout>

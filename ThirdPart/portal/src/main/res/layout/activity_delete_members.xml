@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.smartdot.mobile.portal.activity.DeleteMembersActivity">
+
+    <include
+        layout="@layout/custom_title_useimg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/include3" />
+
+
+    <ListView
+        android:id="@+id/delete_members_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@color/transparent"
+        android:dividerHeight="0dp"
+        android:elevation="8dp"
+        android:fadingEdge="none"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none"
+        android:layout_below="@+id/include3">
+
+    </ListView>
+
+
+</RelativeLayout>

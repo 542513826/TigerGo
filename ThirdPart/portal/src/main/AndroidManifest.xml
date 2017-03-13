@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.smartdot.mobile.portal">
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 获取机型信息权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+
+    <!-- 查看 Wi-Fi 状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 查看网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <!-- 录音 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <!-- 控制振动器 -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- 防止设备休眠 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <!-- 获取联系人信息，demo中演示发送通讯录消息 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon, android:theme">
+
+        <!-- 主界面 -->
+        <activity
+            android:name=".activity.PortalMainActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data
+                    android:host="com.smartdot.mobile.portal"
+                    android:pathPrefix="/conversationlist"
+                    android:scheme="rong"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 登录 -->
+        <activity
+            android:name=".activity.LoginActivity"
+            android:theme="@style/AppTheme"
+            android:launchMode="singleTask"/>
+        <!-- 个人信息界面 -->
+        <activity
+            android:name=".activity.UserInfoActivity"
+            android:launchMode="singleTask"/>
+        <!-- 商店列表 -->
+        <activity
+            android:name=".activity.ShopActivity"
+            android:launchMode="singleTask"/>
+        <!-- 应用分类界面 -->
+        <activity
+            android:name=".activity.ShopClassifyActivity"
+            android:launchMode="singleTask"/>
+        <!-- 群组列表界面 -->
+        <activity
+            android:name=".activity.GroupListActivity"
+            android:launchMode="singleTask"/>
+        <!-- 组织界面 -->
+        <activity
+            android:name=".activity.OrganizationActivity"
+            android:launchMode="singleTask"/>
+        <!-- 搜索界面 -->
+        <activity
+            android:name=".activity.SearchActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTranslucentTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!-- 应用商店分类界面 -->
+        <activity
+            android:name=".activity.AppTypeActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTranslucentTheme"/>
+        <!-- 应用详情界面 -->
+        <activity
+            android:name=".activity.ShopDetailActivity"
+            android:launchMode="singleTask"/>
+        <!-- 应用评论界面 -->
+        <activity
+            android:name=".activity.EaluationActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!-- 通讯录界面 -->
+        <activity
+            android:name=".activity.AddressBookActivity"
+            android:launchMode="singleTask"/>
+        <!-- 群成员列表 -->
+        <activity
+            android:name=".activity.GroupMembersActivity"
+            android:launchMode="singleTask"/>
+        <!-- 个人聊天信息 -->
+        <activity
+            android:name=".activity.ChatUserInfoActivity"
+            android:launchMode="singleTask"/>
+        <!-- 群组聊天信息 -->
+        <activity
+            android:name=".activity.ChatGroupInfoActivity"
+            android:launchMode="singleTask"/>
+        <!-- 二维码界面 -->
+        <activity
+            android:name=".activity.QrActivity"
+            android:launchMode="singleTask"/>
+        <!-- 通讯录个人信息 -->
+        <activity
+            android:name=".activity.AddressBookUserInfoActivity"
+            android:launchMode="singleTask"/>
+        <!-- 轻应用界面 -->
+        <activity
+            android:name=".activity.LightAppActivity"
+            android:launchMode="singleTask"/>
+        <!-- 个人设置界面 -->
+        <activity
+            android:name=".activity.UserSetActivity"
+            android:launchMode="singleTask"/>
+        <!-- 删除人员界面 -->
+        <activity
+            android:name=".activity.DeleteMembersActivity"
+            android:launchMode="singleTask"/>
+        <!-- 监听应用的安装、卸载等 -->
+        <receiver
+            android:name=".receiver.HandleAppReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_CHANGED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.PACKAGE_RESTARTED"/>
+                <action android:name="android.intent.action.PACKAGE_INSTALL"/>
+
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- (融云调试)主界面 -->
+        <activity android:name=".activity.TestActivity"/>
+
+        <!-- 融云开始 -->
+        <!-- 会话界面 -->
+        <activity
+            android:name=".activity.ConversationActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data
+                    android:host="com.smartdot.mobile.portal"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.SubConversationListActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data
+                    android:host="com.smartdot.mobile.portal"
+                    android:pathPrefix="/subconversationlist"
+                    android:scheme="rong"/>
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="io.rong.imlib.ipc.RongService"
+            android:process=":ipc"/>
+        <service android:name="io.rong.imlib.ReConnectService"/>
+
+        <receiver android:name="io.rong.imlib.ConnectChangeReceiver"/>
+        <receiver
+            android:name="io.rong.imlib.HeartbeatReceiver"
+            android:process=":ipc"/>
+        <receiver
+            android:name=".receiver.DemoNotificationReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="io.rong.push.intent.MESSAGE_ARRIVED"/>
+                <action android:name="io.rong.push.intent.MI_MESSAGE_ARRIVED"/>
+                <action android:name="io.rong.push.intent.MESSAGE_CLICKED"/>
+                <action android:name="io.rong.push.intent.MI_MESSAGE_CLICKED"/>
+            </intent-filter>
+        </receiver>
+        <!-- 融云结束 -->
+
+
+        <!-- 高德地图 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="dc0f7804bd76865ac6c6d01f3f660c11"/>
+
+        <!-- 地图 -->
+        <activity
+            android:name=".activity.AMAPLocationActivity"
+            android:launchMode="singleTop"/>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+
+    </application>
+
+</manifest>

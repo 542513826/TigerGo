@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/rc_normal_bg"
+    android:orientation="vertical">
+
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        layout="@layout/custom_title_useimg" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/no_net_rl">
+
+        <TextView
+            android:id="@+id/no_net_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#c1cbd7"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:text="@string/check_network"/>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/no_net_tv"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/bg_nonet"/>
+
+        <Button
+            android:id="@+id/refresh_button"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_nonet_refresh"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:clickable="true"
+            android:layout_below="@+id/no_net_tv"/>
+
+
+    </RelativeLayout>
+
+    <!--<fragment-->
+        <!--android:userId="@+userId/activity_conversation"-->
+        <!--android:userName="io.rong.imkit.fragment.ConversationFragment"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
+
+    <FrameLayout
+        android:id="@+id/rong_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
+</LinearLayout>

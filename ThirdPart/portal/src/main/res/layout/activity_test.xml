@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="一个没有什么卵用的activity" />
+
+    <com.asynctask.zhang.rongdemo.widget.SwitchButton
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        app:buttonTint="@color/white"
+        app:kswTextOn="open"
+        app:kswTextOff="off"
+        app:kswAnimationDuration="100"
+        app:kswBackColor="@color/blue"
+        app:kswBackRadius="25dp"
+        app:buttonTintMode="multiply"
+        android:id="@+id/view" />
+
+    <com.asynctask.zhang.rongdemo.widget.ClearWriteEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入账号"/>
+
+    <com.asynctask.zhang.rongdemo.widget.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_login_logo"/>
+</LinearLayout>
