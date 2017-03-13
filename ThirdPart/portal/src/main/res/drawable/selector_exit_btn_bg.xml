@@ -1,5 +1,0 @@
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/bg_exitgroup_pressed" android:state_checked="true" /> <!-- pressed -->
-    <item android:drawable="@drawable/bg_exitgroup_pressed" android:state_pressed="true" /> <!-- pressed -->
-    <item android:drawable="@drawable/bg_exitgroup_nomal" /> <!-- default/unchecked -->
-</selector>
